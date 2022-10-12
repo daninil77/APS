@@ -1,0 +1,106 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Mon Sep 26 14:37:38 2022
+# Process ID: 5668
+# Current directory: H:/APS/LAB_1
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent9800 H:\APS\LAB_1\LAB_1.xpr
+# Log file: H:/APS/LAB_1/vivado.log
+# Journal file: H:/APS/LAB_1\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project H:/APS/LAB_1/LAB_1.xpr
+update_compile_order -fileset sources_1
+update_compile_ordupdate_compile_ordupdate_compile_order -fileset sim_1
+reset_run synth_1
+launch_runs impl_1 -jobs 6
+wait_on_run impl_1
+1
+launch_runs impl_1 -jobs 6
+wait_on_run impl_1
+open_run impl_1
+close [ open H:/APS/LAB_1/tb_1.v w ]
+add_files H:/APS/LAB_1/tb_1.v
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs synth_1 -jobs 6
+wait_on_run synth_1
+export_ip_user_files -of_objects  [get_files H:/APS/LAB_1/tb_1.v] -no_script -reset -force -quiet
+remove_files  H:/APS/LAB_1/tb_1.v
+update_compile_order -fileset sim_1
+update_compile_order -fileset sim_1
+close [ open H:/APS/LAB_1/LAB_1.srcs/sources_1/new/tb_2.v w ]
+add_files H:/APS/LAB_1/LAB_1.srcs/sources_1/new/tb_2.v
+update_compile_order -fileset sources_1
+export_ip_user_files -of_objects  [get_files H:/APS/LAB_1/LAB_1.srcs/sources_1/new/tb_2.v] -no_script -reset -force -quiet
+remove_files  H:/APS/LAB_1/LAB_1.srcs/sources_1/new/tb_2.v
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+close [ open H:/APS/LAB_1/LAB_1.srcs/sim_1/new/testb_1.sv w ]
+add_files -fileset sim_1 H:/APS/LAB_1/LAB_1.srcs/sim_1/new/testb_1.sv
+update_compile_order -fileset sim_1
+update_compile_order -fileset sim_1
+reset_run synth_1
+launch_runs synth_1 -jobs 6
+wait_on_run synth_1
+launch_runs impl_1 -jobs 6
+wait_on_run impl_1
+close [ open H:/APS/LAB_1/LAB_1.srcs/sources_1/new/Register_file.v w ]
+add_files H:/APS/LAB_1/LAB_1.srcs/sources_1/new/Register_file.v
+update_compile_order -fileset sources_1
+refresh_design
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+close [ open H:/APS/LAB_1/LAB_1.srcs/sim_1/new/TB_RAM_1.sv w ]
+add_files -fileset sim_1 H:/APS/LAB_1/LAB_1.srcs/sim_1/new/TB_RAM_1.sv
+update_compile_order -fileset sim_1
+export_ip_user_files -of_objects  [get_files H:/APS/LAB_1/LAB_1.srcs/sources_1/new/Register_file.v] -no_script -reset -force -quiet
+remove_files  H:/APS/LAB_1/LAB_1.srcs/sources_1/new/Register_file.v
+add_files -norecurse H:/APS/LAB_1/LAB_1.srcs/sources_1/new/Register_file.sv
+update_compile_order -fileset sources_1
+launch_simulation
+close_project
+open_project D:/8202040/LAB_1/LAB_1.xpr
+update_compile_order -fileset sources_1
+launch_simulation
+source test_banch.tcl
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top TB_RF_1 [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+relaunch_sim
+update_compile_order -fileset sim_1
+launch_simulation
+relaunch_sim
+relaunch_sim
+launch_simulation
+relaunch_sim
+relaunch_sim
+relaunch_sim
+close_sim
+export_ip_user_files -of_objects  [get_files D:/8202040/LAB_1/LAB_1.srcs/sim_1/new/testb_1.sv] -no_script -reset -force -quiet
+remove_files  -fileset sim_1 D:/8202040/LAB_1/LAB_1.srcs/sim_1/new/testb_1.sv
+export_ip_user_files -of_objects  [get_files D:/8202040/LAB_1/LAB_1.srcs/sim_1/new/TB.sv] -no_script -reset -force -quiet
+remove_files  -fileset sim_1 D:/8202040/LAB_1/LAB_1.srcs/sim_1/new/TB.sv
+launch_simulation
+source TB_RF_1.tcl
+relaunch_sim
+current_wave_config {Untitled 3}
+add_wave {{/TB_RF_1/DUT/RF}} 
+restart
+run all
+relaunch_sim
+run all
+restart
+run 100 us
+restart
+run 500 ns
+run 100 ns
+run 100 ns
+run 100 ns
+relaunch_sim
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+close [ open D:/8202040/LAB_1/LAB_1.srcs/sim_1/new/mem.mem w ]
+add_files -fileset sim_1 D:/8202040/LAB_1/LAB_1.srcs/sim_1/new/mem.mem

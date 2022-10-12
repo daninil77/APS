@@ -1,0 +1,7 @@
+0.6
+2019.2
+Nov  6 2019
+21:57:16
+H:/APS/LAB_1/LAB_1.sim/sim_1/behav/xsim/glbl.v,1573089660,verilog,,,,glbl,,,,,,,,
+H:/APS/LAB_1/LAB_1.srcs/sim_1/new/testb_1.sv,1664192978,systemVerilog,,,,test_banch,,,,,,,,
+H:/APS/LAB_1/LAB_1.srcs/sources_1/new/top.sv,1664192343,systemVerilog,H:/APS/LAB_1/LAB_1.srcs/sim_1/new/testb_1.sv,H:/APS/LAB_1/LAB_1.srcs/sim_1/new/testb_1.sv,,ALU;ALUOps,,,,,,,,
